@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رشق انستقرام مجاناً</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* إعدادات عامة */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        /* خلفية ملونة ومتحركة بشكل احترافي */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(-45deg, #f72585, #7209b7, #3f37c9, #4cc9f0);
+            background-size: 400% 400%;
+            animation: gradientAnimation 12s ease infinite;
+            overflow: hidden;
+            color: #fff;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* كارت الواجهة بنمط الزجاج الاحترافي (Glassmorphism) */
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 40px 30px;
+            border-radius: 24px;
+            width: 90%;
+            max-width: 450px;
+            text-align: center;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            transition: all 0.5s ease;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        p.welcome-msg {
+            font-size: 16px;
+            color: #e0e0e0;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        /* الأزرار الاحترافية */
+        .btn {
+            background: linear-gradient(90deg, #ff007f, #7f00ff);
+            color: white;
+            border: none;
+            padding: 14px 35px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            width: 100%;
+            box-shadow: 0 5px 15px rgba(255, 0, 127, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 0, 127, 0.6);
+        }
+
+        .btn:active {
+            transform: translateY(1px);
+        }
+
+        /* إخفاء الواجهة الثانية بالبداية */
+        .hidden {
+            display: none !important;
+        }
+
+        /* واجهة الخيارات */
+        .input-group {
+            margin-bottom: 25px;
+            text-align: right;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #f1f1f1;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.3);
+            background: rgba(255,255,255,0.1);
+            color: white;
+            font-size: 16px;
+            text-align: left;
+            direction: ltr;
+            outline: none;
+        }
+
+        .input-group input:focus {
+            border-color: #4cc9f0;
+            box-shadow: 0 0 10px rgba(76, 201, 240, 0.5);
+        }
+
+        .options-title {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        /* كروت العروض */
+        .option-card {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 16px;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .option-card:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: scale(1.02);
+        }
+
+        .option-info {
+            text-align: right;
+        }
+
+        .option-count {
+            font-size: 18px;
+            font-weight: 700;
+            display: block;
+        }
+
+        .option-badge {
+            font-size: 12px;
+            padding: 3px 8px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .badge-free {
+            background-color: #2ed573;
+            color: #fff;
+        }
+
+        .badge-paid {
+            background-color: #ffa502;
+            color: #fff;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .back-link:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="welcome-screen" class="container">
+        <h1>رشق انستقرام مجاناً</h1>
+        <p class="welcome-msg">أهلاً بك بتطبيق الياو لرشق الانستقرام المجاني. التطبيق الأسرع والأضمن لزيادة تفاعلك.</p>
+        <button class="btn" onclick="goToNextScreen()">دخول</button>
+    </div>
+
+    <div id="options-screen" class="container hidden">
+        <h2 class="options-title">اختر باقة المتابعين</h2>
+        
+        <div class="input-group">
+            <label for="username">اسم مستخدم الانستقرام (Username):</label>
+            <input type="text" id="username" placeholder="@username" autocomplete="off">
+        </div>
+
+        <div class="option-card" onclick="handleFreeOrder()">
+            <div class="option-info">
+                <span class="option-count">100 متابع</span>
+                <span class="option-text">تحديث كل 24 ساعة</span>
+            </div>
+            <span class="option-badge badge-free">مجاني</span>
+        </div>
+
+        <div class="option-card" onclick="handlePaidOrder()">
+            <div class="option-info">
+                <span class="option-count">1000 متابع</span>
+                <span class="option-text">سرعة وثبات عالي</span>
+            </div>
+            <span class="option-badge badge-paid">مدفوع</span>
+        </div>
+
+        <a href="#" class="back-link" onclick="goToPrevScreen()">رجوع للرئيسية</a>
+    </div>
+
+    <script>
+        // دالة الانتقال للواجهة الثانية عند الضغط على دخول
+        function goToNextScreen() {
+            document.getElementById('welcome-screen').classList.add('hidden');
+            document.getElementById('options-screen').classList.remove('hidden');
+        }
+
+        // دالة الرجوع للواجهة الأولى
+        function goToPrevScreen() {
+            document.getElementById('options-screen').classList.add('hidden');
+            document.getElementById('welcome-screen').classList.remove('hidden');
+        }
+
+        // عند اختيار الـ 100 متابع المجاني
+        function handleFreeOrder() {
+            const username = document.getElementById('username').value.trim();
+            if (username === "") {
+                alert("الرجاء إدخال اسم المستخدم (اليوزر) أولاً!");
+                return;
+            }
+            
+            // هنا مستقبلاً تربط الكود بالبوت أو قاعدة البيانات الخاصة بك
+            alert("تم استلام طلبك لرشق 100 متابع مجاناً للحساب " + username + " جاري المعالجة واستقطاع النقاط...");
+        }
+
+        // عند اختيار الـ 1000 متابع المدفوع
+        function handlePaidOrder() {
+            alert("راسل المطور للتفعيل");
+            // استبدل YOUR_TELEGRAM_USERNAME بمعرف حسابك على التيليجرام بدون علامة @
+            window.open("https://t.me/YOUR_TELEGRAM_USERNAME", "_blank");
+        }
+    </script>
+</body>
+</html>
